@@ -14,5 +14,5 @@
 - 📧 Email: anuwat.pa@psu.ac.th
 
 #### 📊 GitHub Stats
-![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=Pattanachian&show_icons=true&theme=radical)
+![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=AnuwatCoder&show_icons=true&theme=radical)
 

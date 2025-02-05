@@ -24,6 +24,7 @@ class DataCraftsman {
         return "Hi!";
     }
 }
+```
 
 // Create a new instance of DataCraftsman
 $me = new DataCraftsman();

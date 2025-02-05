@@ -30,8 +30,12 @@ class DataProfile {
 $me = new DataProfile();
 
 // Call the sayHi method
-echo $me->sayHi();
-
+echo $me->sayHi().'<br>';
+echo $me->FullName.'<br>';
+echo $me->NickName.'<br>';
+echo $me->PlaceOfWork.'<br>';
+echo $me->JobPosition.'<br>';
+echo $me->Email;
 ?>
 ```
 

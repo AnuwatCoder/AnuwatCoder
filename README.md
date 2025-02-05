@@ -2,7 +2,6 @@
 
 ```php
 <?php
-
 // DataProfile class definition
 class DataProfile {
     public $FullName;

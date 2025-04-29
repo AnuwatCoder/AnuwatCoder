@@ -2,39 +2,42 @@
 
 ```php
 <?php
-// DataProfile class definition
-class DataProfile {
-    public $FullName;
-    public $NickName;
-    public $PlaceOfWork;
-    public $JobPosition;
-    public $Email;
+use Illuminate\Support\Facades\Route;
 
-    // Constructor to create a new DataProfile instance with default values
-    public function __construct() {
-        $this->FullName = "Anuwat Pattanachian";
-        $this->NickName = "Wat";
-        $this->PlaceOfWork = "Prince of Songkla University";
-        $this->JobPosition = ["Computer Technical Officer, Professional Level"];
-        $this->Email = "anuwat.pa@psu.ac.th";
+Route::get('/profile', function () {
+    class DataProfile {
+        public string $fullName;
+        public string $nickName;
+        public string $placeOfWork;
+        public array $jobPosition;
+        public string $email;
+
+        public function __construct() {
+            $this->fullName = 'Anuwat Pattanachian';
+            $this->nickName = 'Wat';
+            $this->placeOfWork = 'Prince of Songkla University';
+            $this->jobPosition = ['Computer Technical Officer, Professional Level'];
+            $this->email = 'anuwat.pa@psu.ac.th';
+        }
+
+        public function sayHi(): string {
+            return 'Hi!';
+        }
+
+        public function toHtml(): string {
+            return $this->sayHi() . '<br>' .
+                   $this->fullName . '<br>' .
+                   $this->nickName . '<br>' .
+                   $this->placeOfWork . '<br>' .
+                   implode(', ', $this->jobPosition) . '<br>' .
+                   $this->email;
+        }
     }
 
-    // Method to greet
-    public function sayHi() {
-        return "Hi!";
-    }
-}
+    $me = new DataProfile();
+    return $me->toHtml();
+});
 
-// Create a new instance of DataCraftsman
-$me = new DataProfile();
-
-// Call the sayHi method
-echo $me->sayHi().'<br>';
-echo $me->FullName.'<br>';
-echo $me->NickName.'<br>';
-echo $me->PlaceOfWork.'<br>';
-echo implode(', ', $me->JobPosition).'<br>';
-echo $me->Email;
 ?>
 ```
 

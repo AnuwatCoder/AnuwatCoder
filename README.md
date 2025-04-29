@@ -33,7 +33,7 @@ echo $me->sayHi().'<br>';
 echo $me->FullName.'<br>';
 echo $me->NickName.'<br>';
 echo $me->PlaceOfWork.'<br>';
-echo $me->JobPosition.'<br>';
+echo implode(', ', $me->JobPosition).'<br>';
 echo $me->Email;
 ?>
 ```
